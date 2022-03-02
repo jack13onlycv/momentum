@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentum</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/owfont-regular.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="super-main-wrapper">
+  <header>
+    <div class="audio-player-wrapper">
+      <audio src="" class="audio-player"></audio>
+      <div class="audio-player-custom">
+        <div class="tit-wrap">
+          <div class="audio-player-title"></div>
+          <div class="music-time" id="music-time"></div>
+        </div>
+        <input type="range" class="audio-player-progressbar" value="0">
+        <div class="audio-player-custom-controls">
+          <div class="music-left">
+            &#8592;
+          </div>
+          <div class="music-play">
+            &#9654;
+          </div>
+          <div class="music-right">
+            &#8594;
+          </div>
+          <div class="music-shuffle">
+            &#8644;
+          </div>
+          <div class="music-sound">
+            &#9834;
+          </div>
+          <input type="range" class="audio-player-soundbar" value="0">
+        </div>
+      </div>
+      <ul class="music-playlist">
+      </ul>
+    </div>
+
+    <div class="weather-forecast">
+      <div class="weather-icon owf"></div>
+      <input type="text" class="weather-city" maxlength="18">
+      <div class="weather-wrapper">
+        <div class="temperature"></div>
+        <div class="humidity"></div>
+        <div class="wind"></div>
+        <div class="weather-description"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="bg-control left-bg">
+      &lt;
+    </div>
+    <div class="time-greetings-wrapper">
+      <div class="digital-clock">
+        <div class="digital-hours"></div>
+        <div class="digital-dots dot-one">:</div>
+        <div class="digital-minutes"></div>
+        <div class="digital-dots dot-two">:</div>
+        <div class="digital-seconds"></div>
+      </div>
+      <div class="date-wrapper">
+      </div>
+      <div class="greetings-wrapper">
+        <div class="greetings-text">
+
+        </div>
+        <input class="input-visitor-name" type="text" placeholder="[Input name]" maxlength="15">
+      </div>
+    </div>
+
+    <div class="bg-control right-bg">
+      &gt;
+    </div>
+  </main>
+
+  <footer>
+    <div class="quotes-wrapper">
+      <div class="quotes-text">
+        
+      </div>
+      <div class="quotes-author">
+
+      </div>
+      <div class="quotes-refresh">
+        <div class="quotes-refresh-button">
+          	&#8635;
+        </div>
+      </div>
+    </div>
+    <div class="links-wrapper">
+      <div class="rss">
+        <a href="https://rs.school/js/"> 
+          <img class="rs-school" 
+               src="./assets/img/rs_school_js.svg" 
+               alt="rs_school"
+               target="_blank">
+        </a>
+      </div>
+      <div class="creation-time">
+          Creation date <time datetime="2021-10-25">25.10.21</time>
+      </div>
+      <div class="github">
+        <a href="https://github.com/jack13only" 
+           target="_blank">GitHub</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="settings-window hidden-settings">
+    <div class="settings-window-close">
+      &#10007;
+    </div>
+
+    <div class="lang-button-wrapper">
+      <input type="radio" name="language" class="lang-radio" value="en" id="en">
+      <input type="radio" name="language" class="lang-radio" value="ru" id="ru">
+      <label for="en" class="lang-switch lang-en">EN</label>
+      <label for="ru" class="lang-switch lang-ru">RU</label>
+    </div>
+
+    <div class="image-source-wrapper">
+      <div class="image-source-header">
+        Image source
+      </div>
+      <div class="source-label-wrapper">
+
+        <input type="radio" name="image-source" class="image-source-radio" value=0 id="github">
+        <input type="radio" name="image-source" class="image-source-radio" value=1 id="unsplash">
+        <input type="radio" name="image-source" class="image-source-radio" value=2 id="flickr">
+        
+        <label for="github" class="select-preference-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-github">
+              &#10003;
+            </div>
+          </div>
+          <div class="source-name checktext">GitHub</div>
+        </label>
+        <label for="unsplash" class="select-preference-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-unsplash">
+              &#10003;
+            </div>
+          </div>
+          <div class="source-name checktext">Unsplash</div>
+          <div class="tag-name">Tag:</div>
+          <input type="text" class="unsplash-tag">
+        </label>
+        <label for="flickr" class="select-preference-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-flickr">
+              &#10003;
+            </div>
+          </div>
+          <div class="source-name checktext">Flickr</div>
+        </label>
+
+      </div>
+    </div>
+
+    <div class="displaying-items-header lang-header-autoslider displaying-items">
+      Autoslider
+    </div>
+    <div class="autoslide-wrapper">
+      <input type="checkbox" name="autoslide" class="autoslide-checkbox" id="autoslide">
+      <label for="autoslide" class="autoslide-checkbox-wrapper">
+        <div class="select-preference">
+          <div class="checked-select-preference autoslide-checked">
+            &#10003;
+          </div>
+        </div>
+        <div class="autoslide-text checktext">
+          Autoplay
+        </div> 
+        <div class="autoslide-timer">Time (s): </div>
+        <input type="number" class="autoslide-timer-input" min="5" max="300" step="5" >
+      </label>
+    </div>
+
+    <div class="displaying-items">
+
+      <div class="displaying-items-header displaying-header">
+        Displaying items
+      </div>
+
+      <div class="displaying-items-label-wrapper">
+        <input type="checkbox" checked="true" name="disp" class="disp-checkbox" value="music" id="disp-music-player">
+        <label for="disp-music-player" class="disp-checkbox-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-disp-music">
+              &#10003;
+            </div>
+          </div>
+          <div class="disp-name music checktext">Music player</div>
+        </label>
+        <input type="checkbox" name="disp" class="disp-checkbox" value="clock" id="disp-clock">
+        <label for="disp-clock" class="disp-checkbox-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-disp-clock">
+              &#10003;
+            </div>
+          </div>
+          <div class="disp-name clock checktext">Clock</div>
+        </label>
+        <input type="checkbox" name="disp" class="disp-checkbox" value="date" id="disp-date">
+        <label for="disp-date" class="disp-checkbox-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-date">
+              &#10003;
+            </div>
+          </div>
+          <div class="disp-name date checktext">Date</div>
+        </label>
+        <input type="checkbox" name="disp" class="disp-checkbox" value="greetings" id="disp-greetings">
+        <label for="disp-greetings" class="disp-checkbox-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-greetings">
+              &#10003;
+            </div>
+          </div>
+          <div class="disp-name greetings checktext">Greetings</div>
+        </label>
+        <input type="checkbox" name="disp" class="disp-checkbox" value="quotes" id="disp-quotes">
+        <label for="disp-quotes" class="disp-checkbox-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-quotes">
+              &#10003;
+            </div>
+          </div>
+          <div class="disp-name quotes checktext">Quotes</div>
+        </label>
+        <input type="checkbox" name="disp" class="disp-checkbox" value="weather" id="disp-weather">
+        <label for="disp-weather" class="disp-checkbox-wrapper">
+          <div class="select-preference">
+            <div class="checked-select-preference select-weather">
+              &#10003;
+            </div>
+          </div>
+          <div class="disp-name weather checktext">Weather forecast</div>
+        </label>
+      </div>
+
+      <div class="displaying-items-header custom-color-header displaying-header">
+        Custom font color
+      </div>
+      <div class="custom-color-wrapper">
+        <div class="custom-color-r-wrapper">
+          <div class="custom-color-r-r">
+            R
+          </div>
+          <div class="custom-color-r-number">
+            255
+          </div>
+          <input class="custom-color-r custom-color-input" type="range" min = 0 max = 255 step = 1>
+        </div>
+        <div class="custom-color-g-wrapper">
+          <div class="custom-color-g-g">
+            G
+          </div>
+          <div class="custom-color-g-number">
+            255
+          </div>
+          <input class="custom-color-g custom-color-input" type="range" min = 0 max = 255 step = 1>
+        </div>
+        <div class="custom-color-b-wrapper">
+          <div class="custom-color-b-b">
+            B
+          </div>
+          <div class="custom-color-b-number">
+            255
+          </div>
+          <input class="custom-color-b custom-color-input" type="range" min = 0 max = 255 step = 1>
+        </div>
+      
+      </div>
+
+    </div>
+    
+    <div class="settings-arrow">
+      <div  class="settings-arrow-text">
+        Settings
+      </div>
+    </div>
+  </div>
+
+  <div class="links-list-wrapper links-hidden">
+    <div class="links-window-close">
+      &#10007;
+    </div>
+    <div class="added-links">
+      <ul class="added-links-ul">
+
+      </ul>
+    </div>
+    <div class="add-wrapper">
+      <input type="text" class="add-input">
+      <div class="add-links-button links-button">&#43;</div>
+      <div class="reset-links-button links-button">&#8631;</div>
+    </div>
+
+    <div class="links-arrow">
+      <div class="links-arrow-text">
+        Links
+      </div>
+    </div>
+  </div>
+
+  <div class="error-popup error-popup-hide"></div>
+  <script src="./scripts/clock.js"></script>
+</div>
+</body>
+</html>
+
